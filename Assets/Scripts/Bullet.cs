@@ -31,6 +31,12 @@ public class Bullet : MonoBehaviour
         if (collision.CompareTag("Enemy")&&isplayerOwened)
         {
             collision.GetComponent<EnemyHp>().TakeDamage(1);
+            Destroy(gameObject);
+        }
+        else if(collision.CompareTag("Player") &!isplayerOwened)
+        {
+            collision.GetComponent<PlayerHp>().TakeDamage(1);
+            Destroy(gameObject);
         }
     }
 }
