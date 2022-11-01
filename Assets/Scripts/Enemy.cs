@@ -10,9 +10,10 @@ public class Enemy : MonoBehaviour
     public float walkStep = 1;
     public float walkDistMult = 1;
     public Transform playerPos;
-    // Start is called before the first frame update
+
     void Start()
     {
+        playerPos = GameManager.instance.player.transform;
         rgbd = GetComponent<Rigidbody2D>();
 
         Invoke(methodName: "FireBullet", Random.Range(fireRate, fireRate + 1));
@@ -21,14 +22,14 @@ public class Enemy : MonoBehaviour
 
     public void FireBullet()
     {
-        Debug.Log("Fired");
-        Instantiate(bullet, gameObject.transform);
+        var _bullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        _bullet.GetComponent<Bullet>().direction = -(transform.position-playerPos.position).normalized;
+
         Invoke(methodName: "FireBullet", Random.Range(fireRate, fireRate + 1));
     }
 
     public void Walk()
     {
-        Debug.Log("Walked");
         Vector2 walkDir = (playerPos.position - transform.position).normalized;
         walkDir = new Vector2(Random.Range(walkDir.x - 0.5f, walkDir.x + 0.5f), Random.Range(walkDir.y - 0.5f, walkDir.y + 0.5f))*walkDistMult;
 

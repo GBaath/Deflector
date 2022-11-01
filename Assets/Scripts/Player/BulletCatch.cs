@@ -56,7 +56,7 @@ public class BulletCatch : MonoBehaviour
         bullet.transform.parent = null;
 
         //vector towards mouse
-        bullet.Fire(-(transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        bullet.Fire(-(transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized);
 
     }
 }
