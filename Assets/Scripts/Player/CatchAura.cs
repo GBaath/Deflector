@@ -17,7 +17,7 @@ public class CatchAura : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
-            catchScript.bulletsInRange.Remove(collision.gameObject);
+           catchScript.bulletsInRange.Remove(collision.gameObject);
         }
     }
 }

@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public Vector3 direction;
     public float speed;
+    public bool isplayerOwened;
 
     private Rigidbody2D rb;
 
@@ -20,9 +21,8 @@ public class Bullet : MonoBehaviour
         rb.velocity = direction * speed;
 
     }
-    public void Fire(Vector3 direction)
+    public void Fire(Vector2 direction)
     {
-        rb.velocity = direction * speed;
-
+        rb.velocity = direction.normalized * speed;
     }
 }
