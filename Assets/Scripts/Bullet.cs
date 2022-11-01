@@ -25,4 +25,12 @@ public class Bullet : MonoBehaviour
     {
         rb.velocity = direction.normalized * speed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy")&&isplayerOwened)
+        {
+            collision.GetComponent<EnemyHp>().TakeDamage(1);
+        }
+    }
 }
