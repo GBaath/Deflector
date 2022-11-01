@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyAnimation enemyAnim;
     public GameObject bullet;
     Rigidbody2D rgbd;
     public float fireRate = 1;
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
 
     public void FireBullet()
     {
+        enemyAnim.ShootAnim();
         var _bullet = Instantiate(bullet, transform.position, Quaternion.identity);
         _bullet.GetComponent<Bullet>().direction = -(transform.position-playerPos.position).normalized;
 
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
 
     public void Walk()
     {
+        enemyAnim.MoveAnim();
         Vector2 walkDir = (playerPos.position - transform.position).normalized;
         walkDir = new Vector2(Random.Range(walkDir.x - 0.5f, walkDir.x + 0.5f), Random.Range(walkDir.y - 0.5f, walkDir.y + 0.5f))*walkDistMult;
 

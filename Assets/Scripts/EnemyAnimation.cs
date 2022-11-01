@@ -10,4 +10,9 @@ public class EnemyAnimation : MonoBehaviour
     {
         enemyAnim.SetTrigger("Shoot");
     }
+
+    public void MoveAnim()
+    {
+        enemyAnim.SetTrigger("Move");
+    }
 }

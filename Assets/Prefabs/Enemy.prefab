@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4566495312392431051}
   - component: {fileID: 4566495312392431048}
   - component: {fileID: 9018388135593813262}
+  - component: {fileID: 5881775390022203359}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -147,10 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae285e476abc814e85a5867fad9c3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 5881775390022203359}
   bullet: {fileID: 9029502555400559175, guid: 517b39ac4f4245242b896b58228503ac, type: 3}
   fireRate: 1
   walkStep: 1
-  walkDistMult: 1
+  walkDistMult: 5
   playerPos: {fileID: 0}
 --- !u!95 &9018388135593813262
 Animator:
@@ -162,7 +164,7 @@ Animator:
   m_GameObject: {fileID: 4566495312392431049}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0006393311156b40ae41f1fcafb8d39, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -172,3 +174,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5881775390022203359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566495312392431049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d664650cec25d740b8a499bce1db445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 9018388135593813262}
