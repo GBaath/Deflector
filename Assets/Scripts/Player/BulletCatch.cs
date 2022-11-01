@@ -43,7 +43,8 @@ public class BulletCatch : MonoBehaviour
                 _bullet.isplayerOwened = true;
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
-                bullet.transform.parent = transform;
+                //for rotation
+                bullet.transform.parent = transform.GetChild(0);
                 carriedBullets.Add(bullet);
             }
         }
