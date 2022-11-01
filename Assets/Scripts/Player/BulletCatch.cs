@@ -8,6 +8,7 @@ public class BulletCatch : MonoBehaviour
     public List<GameObject> carriedBullets = new List<GameObject>();
     private bool catchBuffer;
     [SerializeField] private float catchBufferTime = .5f;
+    [SerializeField] private Transform bulletParent;
 
     void Start()
     {
@@ -41,11 +42,15 @@ public class BulletCatch : MonoBehaviour
 
                 //stop movement and physics
                 _bullet.isplayerOwened = true;
-                rb.velocity = Vector3.zero;
-                rb.isKinematic = true;
+               // rb.velocity = Vector3.zero;
+                //rb.isKinematic = true;
                 //for rotation
-                bullet.transform.parent = transform.GetChild(0);
+                bullet.transform.parent = bulletParent;
                 carriedBullets.Add(bullet);
+
+                rb.drag = 50;
+                StartCoroutine(VarChange(result => rb.isKinematic = result, .5f, true));
+
             }
         }
     }
@@ -56,6 +61,9 @@ public class BulletCatch : MonoBehaviour
         foreach (var bullet in carriedBullets)
         {
             var _bullet = bullet.GetComponent<Bullet>();
+            var rb = bullet.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+            rb.drag = 0;
 
             //dont fire all bullet at the same time
             StartCoroutine(FireDelay(_bullet, fireDelay));
@@ -82,4 +90,5 @@ public class BulletCatch : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         boolVar(endValue);
     }
+
 }
