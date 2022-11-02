@@ -10,6 +10,8 @@ public class BulletCatch : MonoBehaviour
     [SerializeField] private float catchBufferTime = .5f;
     [SerializeField] private Transform bulletParent;
 
+    [SerializeField] private ParticleSystem magicParticles;
+
     public float dragValue = 0;
 
     void Start()
@@ -22,6 +24,9 @@ public class BulletCatch : MonoBehaviour
         {
             catchBuffer = true;
             StartCoroutine(VarChange(result => catchBuffer = result, catchBufferTime, false));
+            magicParticles.Stop();
+            magicParticles.Play();
+            
         }
         else if(Input.GetButtonDown("Fire1"))
         {
@@ -43,32 +48,43 @@ public class BulletCatch : MonoBehaviour
                 var _bullet = bullet.GetComponent<Bullet>();
 
                 //stop movement and physics
-                _bullet.isplayerOwened = true;
-                //for rotation
                 bullet.transform.parent = bulletParent;
-                carriedBullets.Add(bullet);
-
                 rb.drag = dragValue;
                 StartCoroutine(VarChange(result => rb.isKinematic = result, .25f, true));
 
+                //no collision while carried
+               // bullet.GetComponent<Collider2D>().enabled = false;
+
+                //player takes no damage from own
+                _bullet.isplayerOwened = true;
+                carriedBullets.Add(bullet);
+
+                //new rotatin when carried
                 _bullet.GetComponentInChildren<RotationLocker>().lockedRotation = Quaternion.LookRotation(Vector3.forward,Vector3.right);
+
+                //switch animations
+                bullet.transform.GetChild(0).gameObject.SetActive(true);
+                bullet.transform.GetChild(1).gameObject.SetActive(false);
             }
         }
     }
     void Throw()
     {
+        magicParticles.Stop();
+        magicParticles.Play();
         float fireDelay = 0;
 
         foreach (var bullet in carriedBullets)
         {
             var _bullet = bullet.GetComponent<Bullet>();
             var rb = bullet.GetComponent<Rigidbody2D>();
+
+            //physics back online
             rb.isKinematic = false;
             rb.drag = 0;
 
             //dont fire all bullet at the same time
             StartCoroutine(FireDelay(_bullet, fireDelay));
-            //TODO MAKE VARIABLE
             fireDelay += .1f;
         }
     }
@@ -84,6 +100,7 @@ public class BulletCatch : MonoBehaviour
         //vector towards mouse
         bullet.GetComponentInChildren<RotationLocker>().enabled = false;
         bullet.Fire(-(bullet.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized);
+        bullet.fired = true;
         carriedBullets.Remove(bullet.gameObject);
 
     }

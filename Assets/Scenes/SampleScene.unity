@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572358606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.19, y: 0, z: 0}
+  m_LocalPosition: {x: -7.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 1492394316}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,6 +661,7 @@ MonoBehaviour:
   - {fileID: 444193433}
   enemies:
   - {fileID: 4566495312392431049, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
+  currentEnemies: []
   wave: 1
   enemyTypes: 1
 --- !u!1 &1695866004
