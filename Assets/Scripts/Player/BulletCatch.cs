@@ -10,6 +10,8 @@ public class BulletCatch : MonoBehaviour
     [SerializeField] private float catchBufferTime = .5f;
     [SerializeField] private Transform bulletParent;
 
+    public float dragValue = 0;
+
     void Start()
     {
         
@@ -42,15 +44,14 @@ public class BulletCatch : MonoBehaviour
 
                 //stop movement and physics
                 _bullet.isplayerOwened = true;
-               // rb.velocity = Vector3.zero;
-                //rb.isKinematic = true;
                 //for rotation
                 bullet.transform.parent = bulletParent;
                 carriedBullets.Add(bullet);
 
-                rb.drag = 50;
-                StartCoroutine(VarChange(result => rb.isKinematic = result, .5f, true));
+                rb.drag = dragValue;
+                StartCoroutine(VarChange(result => rb.isKinematic = result, .25f, true));
 
+                _bullet.GetComponentInChildren<RotationLocker>().lockedRotation = Quaternion.LookRotation(Vector3.forward,Vector3.right);
             }
         }
     }
@@ -81,7 +82,8 @@ public class BulletCatch : MonoBehaviour
         bullet.transform.parent = null;
 
         //vector towards mouse
-        bullet.Fire(-(transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized);
+        bullet.GetComponentInChildren<RotationLocker>().enabled = false;
+        bullet.Fire(-(bullet.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized);
         carriedBullets.Remove(bullet.gameObject);
 
     }

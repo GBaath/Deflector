@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7974861124699594241}
   - component: {fileID: 6801156716340032753}
+  - component: {fileID: 801163810185897359}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657262953768415920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45ec6c6a9be08054f93d885b4827028e, type: 3}
+  m_Sprite: {fileID: -1907723138, guid: 2f33cb72195f60341881b3a4bb58c38c, type: 3}
   m_Color: {r: 1, g: 0.5358716, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &801163810185897359
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657262953768415920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f6c3017a1c6cd94799da73c333fe699, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9029502555400559175
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +117,7 @@ GameObject:
   - component: {fileID: 3334221850231278966}
   - component: {fileID: 3603641662482240316}
   - component: {fileID: 4936534217136613484}
+  - component: {fileID: 561216558970347865}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -170,4 +192,17 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.1
+--- !u!114 &561216558970347865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029502555400559175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b9cd6a8eea1524aac8de6a64a52598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedRotation: {x: 0, y: 0, z: 0, w: 0}

@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &572358607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,13 +317,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4740881575494212618, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 4566495312392431049, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4740881575494212618, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740881575494212618, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740881575494212661, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
       propertyPath: m_IsActive
@@ -396,6 +400,18 @@ PrefabInstance:
     - target: {fileID: 3924240834626540879, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356107191627818761, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: catchTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356107191627818761, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: dragValue
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356107191627818761, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: catchdelay
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7871719542143342561, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
       propertyPath: m_RootOrder
