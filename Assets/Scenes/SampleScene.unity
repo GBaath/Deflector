@@ -661,6 +661,7 @@ MonoBehaviour:
   - {fileID: 444193433}
   enemies:
   - {fileID: 4566495312392431049, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
+  - {fileID: 4566495312392431049, guid: d999aff1a5108e1428b43f7d321fd4eb, type: 3}
   currentEnemies: []
   wave: 1
   enemyTypes: 1

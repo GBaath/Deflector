@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float walkDistMult = 1;
     public Transform playerPos;
 
+    [SerializeField] GameObject deathObject;
+
     void Start()
     {
         playerPos = GameManager.instance.player.transform;
@@ -47,5 +49,6 @@ public class Enemy : MonoBehaviour
     {
         CancelInvoke();
         GameObject.Destroy(gameObject);
+        var death = Instantiate(deathObject, transform.position, Quaternion.identity);
     }
 }
