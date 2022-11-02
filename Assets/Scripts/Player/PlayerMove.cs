@@ -20,6 +20,14 @@ public class PlayerMove : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
 
         move = moveX * Vector3.right + moveY * Vector3.up;
+
+        if (Input.GetButton("Horizontal"))
+        {
+            if (moveX < 0)
+                GetComponent<SpriteRenderer>().flipX = true;
+            else
+                GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
     private void FixedUpdate()
     {

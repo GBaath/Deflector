@@ -60,6 +60,7 @@ public class BulletCatch : MonoBehaviour
                 carriedBullets.Add(bullet);
 
                 //new rotatin when carried
+                _bullet.GetComponentInChildren<RotationLocker>().enabled = true;
                 _bullet.GetComponentInChildren<RotationLocker>().lockedRotation = Quaternion.LookRotation(Vector3.forward,Vector3.right);
 
                 //switch animations
