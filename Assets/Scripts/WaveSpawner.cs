@@ -13,15 +13,29 @@ public class WaveSpawner : MonoBehaviour
 
     public void SpawnWave()
     {
+        if (wave % 3 == 0)
+            enemyTypes++;
+
         int enemiesToSpawn = wave * 3;
-        for (int i = 0; i > enemiesToSpawn; i++)
+        for (int i = 0; i < enemiesToSpawn; i++)
         {
-            SpawnEnemy(0);
+            Invoke(methodName: "SpawnEnemy", Random.Range(0f, 5.0f));
         }
+        wave++;
     }
 
-    void SpawnEnemy(int index)
+    void SpawnEnemy()
     {
+        //Choose randomly between current enemies
+        int index = (int)Random.Range(0, enemyTypes);
         currentEnemies.Add(Instantiate(enemies[index], spawnPoints[Random.Range(0, spawnPoints.Count)]));
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnWave();
+        }
     }
 }
