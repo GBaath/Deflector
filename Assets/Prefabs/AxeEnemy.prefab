@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8597775557443860538}
   - component: {fileID: 4269026511201173457}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: AxeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,12 +82,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 583eae984cb6f6c43b6b3b7ee6a5c79a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a8abc96cc79cd6409b7a24f98cc83bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -131,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.8, y: 0.6}
+    newSize: {x: 0.2, y: 0.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnim: {fileID: 5881775390022203359}
   audioPlay: {fileID: 990422764946425296}
-  bullet: {fileID: 9029502555400559175, guid: 517b39ac4f4245242b896b58228503ac, type: 3}
+  bullet: {fileID: 9029502555400559175, guid: 9b4ef8b4d016c3241bf241eeec3ffd4e, type: 3}
   fireRate: 1
   walkStep: 1
   walkDistMult: 5

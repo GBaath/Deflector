@@ -13,10 +13,10 @@ public class WaveSpawner : MonoBehaviour
 
     public void SpawnWave()
     {
-        if (wave % 3 == 0)
+        if (wave % 5 == 0)
             enemyTypes++;
 
-        int enemiesToSpawn = wave * 3;
+        int enemiesToSpawn = (int)(wave * 1.3);
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             Invoke(methodName: "SpawnEnemy", Random.Range(0f, 5.0f));
