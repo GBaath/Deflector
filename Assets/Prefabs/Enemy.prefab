@@ -208,7 +208,7 @@ MonoBehaviour:
   audioSource: {fileID: 8597775557443860538}
   audioClip:
   - {fileID: 8300000, guid: 946a47e01fff24249858eda5d3135fa7, type: 3}
-  - {fileID: 8300000, guid: e6556b4984391354f9377de9aca80583, type: 3}
+  - {fileID: 8300000, guid: 077ce331f08bd0146967003a6020ee81, type: 3}
   - {fileID: 8300000, guid: 5501c53f27531504a993db4cd4abd47f, type: 3}
   linkedAudio: {fileID: 0}
 --- !u!82 &8597775557443860538
@@ -337,6 +337,10 @@ PrefabInstance:
     - target: {fileID: 8714446695178992888, guid: cb907886503475d489f7c341ed66f97a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714446695178992891, guid: cb907886503475d489f7c341ed66f97a, type: 3}
+      propertyPath: m_Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8714446695178992891, guid: cb907886503475d489f7c341ed66f97a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
