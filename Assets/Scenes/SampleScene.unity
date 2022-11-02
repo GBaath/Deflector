@@ -269,7 +269,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &572358606
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +402,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
-=======
->>>>>>> Stashed changes
 --- !u!1 &1492394313
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +488,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1492394316
 BoxCollider2D:
@@ -644,7 +641,7 @@ Transform:
   - {fileID: 1695866005}
   - {fileID: 444193433}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1668350012
 MonoBehaviour:
@@ -664,7 +661,6 @@ MonoBehaviour:
   - {fileID: 444193433}
   enemies:
   - {fileID: 4566495312392431049, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
-  - {fileID: 4566495312392431049, guid: d999aff1a5108e1428b43f7d321fd4eb, type: 3}
   currentEnemies: []
   wave: 1
   enemyTypes: 1
