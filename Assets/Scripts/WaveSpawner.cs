@@ -18,7 +18,10 @@ public class WaveSpawner : MonoBehaviour
     public void SpawnWave()
     {
         if (wave % 5 == 0)
+        {
             enemyTypes++;
+            enemyTypes = Mathf.Clamp(enemyTypes, 0, 3);
+        }
 
         int enemiesToSpawn = (int)(wave * 1.3);
         for (int i = 0; i < enemiesToSpawn; i++)

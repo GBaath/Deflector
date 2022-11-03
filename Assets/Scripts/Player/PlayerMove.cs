@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     private Vector2 automove;
     private float moveX, moveY;
     private Rigidbody2D rb;
+    [SerializeField] ParticleSystem runParticles;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,9 +25,25 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButton("Horizontal"))
         {
             if (moveX < 0)
+            {
                 GetComponent<SpriteRenderer>().flipX = true;
+                runParticles.transform.localEulerAngles = new Vector3(0, 180, 0);
+            }
             else
+            {
                 GetComponent<SpriteRenderer>().flipX = false;
+                runParticles.transform.localEulerAngles = new Vector3(0, 0, 0);
+            }
+        }
+        if(move != Vector2.zero)
+        {
+            //runParticles.gameObject.SetActive(true);
+            runParticles.enableEmission = true;
+        }
+        else
+        {
+            runParticles.enableEmission = false;
+            //runParticles.gameObject.SetActive(false);
         }
     }
     private void FixedUpdate()

@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 1095893913}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1155.3, y: 660.4}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84008639
 MonoBehaviour:
@@ -1436,8 +1436,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1283481275
+  m_SortingLayer: -1
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 268d75e670ab6a346a4968f3772f8e5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1777,9 +1777,10 @@ MonoBehaviour:
   enemies:
   - {fileID: 4566495312392431049, guid: 892e978d5a5164f4c97db54a01d0dae8, type: 3}
   - {fileID: 4566495312392431049, guid: d999aff1a5108e1428b43f7d321fd4eb, type: 3}
+  - {fileID: 4566495312392431049, guid: 7729c1bd965a1b04ea9eefb69c090d79, type: 3}
   currentEnemies: []
   wave: 1
-  enemyTypes: 1
+  enemyTypes: 3
 --- !u!1 &1695866004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2180,38 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1947935650, guid: aee32cb66dcce2f48b5c0ec0b885a23f, type: 3}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 22937
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.2519135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.37288997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.4811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279963950406071662, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
