@@ -86,16 +86,21 @@ public class BulletCatch : MonoBehaviour
 
             //dont fire all bullet at the same time
             StartCoroutine(FireDelay(_bullet, fireDelay));
-            fireDelay += .1f;
+            fireDelay += .075f;
         }
     }
     IEnumerator FireDelay(Bullet bullet,float delay)
     {
         yield return new WaitForSeconds(delay);
-       
-        //detach from parent and eable physics
-        var rb = bullet.GetComponent<Rigidbody2D>();
-        rb.isKinematic = false;
+
+        //detach from parent and eable physicstry
+        try
+        {
+            var rb = bullet.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+        }
+        finally { }
+
         bullet.transform.parent = null;
 
         //vector towards mouse

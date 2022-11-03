@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac68458614603b409185b72e56cea76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPlayer: {fileID: 0}
   direction: {x: 1, y: 0, z: 0}
   speed: 15
   isplayerOwened: 0

@@ -158,6 +158,7 @@ MonoBehaviour:
   fireRate: 1
   walkStep: 1
   walkDistMult: 5
+  scoreOnKill: 300
   playerPos: {fileID: 0}
   deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
 --- !u!95 &9018388135593813262
@@ -330,6 +331,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 4566495312392431044}
     m_Modifications:
+    - target: {fileID: 8714446695178992888, guid: cb907886503475d489f7c341ed66f97a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714446695178992888, guid: cb907886503475d489f7c341ed66f97a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8714446695178992888, guid: cb907886503475d489f7c341ed66f97a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0

@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance { get; private set; }
+    public static GameManager Instance { get; private set; }
 
     public GameObject player;
 
+    [SerializeField] TextMeshProUGUI scoreText, waveText;
+
+    public int score;
+
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             player = FindObjectOfType<PlayerMove>().gameObject;
             //DontDestroyOnLoad(gameObject);
         }
@@ -20,5 +25,15 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void AddScore(int score)
+    {
+        this.score += score;
+        scoreText.text = "Score: " + this.score.ToString();
+    }
+    public void SetWaveNr(int waveNr)
+    {
+        waveText.text = "Wave: " + waveNr.ToString();
     }
 }

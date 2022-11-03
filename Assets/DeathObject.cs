@@ -9,11 +9,11 @@ public class DeathObject : MonoBehaviour
     void Start()
     {
         spriteToFade = gameObject.GetComponentInChildren<SpriteRenderer>();
-        Invoke(nameof(FadeOut), 3f);
+        Invoke(nameof(FadeOut), 15f);
     }
     void FadeOut()
     {
-        StartCoroutine(LerpFunction(Color.clear, 5));
+        StartCoroutine(LerpFunction(Color.clear, 3));
 
     }
     IEnumerator LerpFunction(Color endValue, float duration)

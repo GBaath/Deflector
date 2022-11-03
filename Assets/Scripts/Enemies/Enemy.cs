@@ -11,13 +11,14 @@ public class Enemy : MonoBehaviour
     public float fireRate = 1;
     public float walkStep = 1;
     public float walkDistMult = 1;
+    public int scoreOnKill = 100;
     public Transform playerPos;
 
     [SerializeField] GameObject deathObject;
 
     void Start()
     {
-        playerPos = GameManager.instance.player.transform;
+        playerPos = GameManager.Instance.player.transform;
         rgbd = GetComponent<Rigidbody2D>();
 
         Invoke(methodName: "FireBullet", Random.Range(fireRate, fireRate + 1));
@@ -48,7 +49,10 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         CancelInvoke();
-        GameObject.Destroy(gameObject);
+        GameManager.Instance.GetComponent<WaveSpawner>().RemoveEnemy(gameObject);
+        GameManager.Instance.AddScore(scoreOnKill);
         var death = Instantiate(deathObject, transform.position, Quaternion.identity);
+        death.GetComponentInChildren<FloatingNumber>().nrToShow = scoreOnKill;
+        GameObject.Destroy(gameObject);
     }
 }
