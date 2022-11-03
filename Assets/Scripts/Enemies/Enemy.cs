@@ -14,13 +14,14 @@ public class Enemy : MonoBehaviour
     public int scoreOnKill = 100;
     public Transform playerPos;
 
-    [SerializeField] GameObject deathObject;
+    [SerializeField] GameObject deathObject, spawningObject;
 
     void Start()
     {
         playerPos = GameManager.Instance.player.transform;
         rgbd = GetComponent<Rigidbody2D>();
 
+        Instantiate(spawningObject, transform.position, Quaternion.identity);
         Invoke(methodName: "FireBullet", Random.Range(fireRate, fireRate + 1));
         Invoke(methodName: "Walk", Random.Range(fireRate, fireRate + 1));
     }

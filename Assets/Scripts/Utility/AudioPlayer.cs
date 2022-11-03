@@ -11,6 +11,10 @@ public class AudioPlayer : MonoBehaviour
     {
        audioSource.PlayOneShot(audioClip[index],volume);
     }
+    public void PlayAudio(int index)
+    {
+        audioSource.PlayOneShot(audioClip[index]);
+    }
     public void PlayLinkedAudio()
     {
         audioSource.PlayOneShot(linkedAudio);

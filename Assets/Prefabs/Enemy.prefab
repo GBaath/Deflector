@@ -161,6 +161,7 @@ MonoBehaviour:
   scoreOnKill: 300
   playerPos: {fileID: 0}
   deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
+  spawningObject: {fileID: 3437721484483019144, guid: e70b450b3cdafae4a85dbdcfea430765, type: 3}
 --- !u!95 &9018388135593813262
 Animator:
   serializedVersion: 4

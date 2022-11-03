@@ -14,9 +14,11 @@ public class BulletCatch : MonoBehaviour
 
     public float dragValue = 0;
 
+    private AudioPlayer audioPlayer;
+
     void Start()
     {
-        
+        audioPlayer = GetComponent<AudioPlayer>();
     }
     void Update()
     {
@@ -71,6 +73,7 @@ public class BulletCatch : MonoBehaviour
     }
     void Throw()
     {
+        audioPlayer.PlayAudio(0);
         magicParticles.Stop();
         magicParticles.Play();
         float fireDelay = 0;

@@ -6,7 +6,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public List<Transform> spawnPoints;
     public List<GameObject> enemies;
-    [SerializeField]List<GameObject> currentEnemies;
+    public List<GameObject> currentEnemies;
     public int wave = 1;
     public int enemyTypes = 1;
 

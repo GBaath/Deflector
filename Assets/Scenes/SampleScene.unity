@@ -657,7 +657,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 72d9d09afa8212b4799f7b95cf1b466b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.568
+  m_Volume: 0.432
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1621,7 +1621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1492394316
 BoxCollider2D:
@@ -2380,7 +2380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7871719542143342561, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7871719542143342561, guid: 1eaac63afbeb0f64993be4812128d29e, type: 3}
       propertyPath: m_LocalPosition.x
