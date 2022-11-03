@@ -240,6 +240,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 5881775390022203359}
   audioPlay: {fileID: 990422764946425296}
   bullet: {fileID: 9029502555400559175, guid: 9b4ef8b4d016c3241bf241eeec3ffd4e, type: 3}
+  coin: {fileID: 6796794270325423979, guid: ce0fe5dd4f32b0243b25f00624d8f31b, type: 3}
   fireRate: 1
   walkStep: 1
   walkDistMult: 5

@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public EnemyAnimation enemyAnim;
     public AudioPlayer audioPlay;
     public GameObject bullet;
+    public GameObject coin;
     Rigidbody2D rgbd;
     public float fireRate = 1;
     public float walkStep = 1;
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         CancelInvoke();
+        Instantiate(coin, transform.position, Quaternion.identity);
         GameManager.Instance.GetComponent<WaveSpawner>().RemoveEnemy(gameObject);
         GameManager.Instance.AddScore(scoreOnKill);
         var death = Instantiate(deathObject, transform.position, Quaternion.identity);
