@@ -26,7 +26,10 @@ public class WaveSpawner : MonoBehaviour
         int enemiesToSpawn = (int)(wave * 1.3);
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            Invoke(methodName: "SpawnEnemy", Random.Range(0f, 2.0f));
+            if (i > 0)
+            Invoke(methodName: "SpawnEnemy", Random.Range(0f, 7.0f));
+            else
+                Invoke(methodName: "SpawnEnemy",0);
         }
         GameManager.Instance.SetWaveNr(wave);
         wave++;
