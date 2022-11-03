@@ -159,9 +159,9 @@ MonoBehaviour:
   bullet: {fileID: 9029502555400559175, guid: 47f641d1856965446930ded8d3d77699, type: 3}
   coin: {fileID: 6796794270325423979, guid: ce0fe5dd4f32b0243b25f00624d8f31b, type: 3}
   fireRate: 0.75
-  walkStep: 1
+  walkStep: 0.5
   walkDistMult: 5
-  scoreOnKill: 300
+  scoreOnKill: 1000
   playerPos: {fileID: 0}
   deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
   spawningObject: {fileID: 3437721484483019144, guid: e70b450b3cdafae4a85dbdcfea430765, type: 3}
@@ -325,8 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpSlider: {fileID: 4740881576381693188}
-  hp: 2
-  maxHp: 2
+  hp: 1
+  maxHp: 1
 --- !u!1 &6493989461289122335
 GameObject:
   m_ObjectHideFlags: 0

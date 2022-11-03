@@ -17,11 +17,6 @@ public class WaveSpawner : MonoBehaviour
     }
     public void SpawnWave()
     {
-        if (wave % 5 == 0)
-        {
-            enemyTypes++;
-            enemyTypes = Mathf.Clamp(enemyTypes, 0, 3);
-        }
 
         int enemiesToSpawn = (int)(wave * 1.3);
         for (int i = 0; i < enemiesToSpawn; i++)
@@ -31,6 +26,11 @@ public class WaveSpawner : MonoBehaviour
             else
                 Invoke(methodName: "SpawnEnemy",0);
         }
+        if (wave % 2 == 0)
+        {
+            enemyTypes++;
+            enemyTypes = Mathf.Clamp(enemyTypes, 0, 3);
+        }
         GameManager.Instance.SetWaveNr(wave);
         wave++;
     }
@@ -39,6 +39,7 @@ public class WaveSpawner : MonoBehaviour
     {
         //Choose randomly between current enemies
         int index = (int)Random.Range(0, enemyTypes);
+        Debug.Log(index);
         currentEnemies.Add(Instantiate(enemies[index], spawnPoints[Random.Range(0, spawnPoints.Count)]));
     }
     private void Update()
