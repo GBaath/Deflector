@@ -15,9 +15,14 @@ public class coin : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<AudioPlayer>().PlayAudio(0);
+            Destroy(gameObject,2f);
+            transform.GetChild(0).gameObject.SetActive(true);
 
+            GetComponentInChildren<FloatingNumber>().nrToShow = 150;
             FindObjectOfType<GameManager>().AddScore(150);
+
         }
 
 

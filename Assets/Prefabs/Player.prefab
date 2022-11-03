@@ -5194,6 +5194,8 @@ MonoBehaviour:
   hp: 5
   maxHp: 5
   audioPlayer: {fileID: 6172635357213819226}
+  gameoverObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
+  deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
 --- !u!1 &6024673152507884365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,6 +5505,7 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: 077ce331f08bd0146967003a6020ee81, type: 3}
   - {fileID: 8300000, guid: 876cade8ce731f344b2be5140872e40b, type: 3}
+  - {fileID: 8300000, guid: 26a6d494bac5e2046b724a353c00f540, type: 3}
   linkedAudio: {fileID: 0}
 --- !u!1 &8316797429085217025
 GameObject:
