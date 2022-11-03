@@ -140,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 0.25}
+  m_Size: {x: 0.59, y: 0.71}
   m_EdgeRadius: 0
 --- !u!114 &4566495312392431048
 MonoBehaviour:
@@ -158,10 +158,10 @@ MonoBehaviour:
   audioPlay: {fileID: 990422764946425296}
   bullet: {fileID: 9029502555400559175, guid: 47f641d1856965446930ded8d3d77699, type: 3}
   coin: {fileID: 6796794270325423979, guid: ce0fe5dd4f32b0243b25f00624d8f31b, type: 3}
-  fireRate: 0.5
-  walkStep: 0
-  walkDistMult: 7.5
-  scoreOnKill: 1000
+  fireRate: 0.75
+  walkStep: 1
+  walkDistMult: 5
+  scoreOnKill: 300
   playerPos: {fileID: 0}
   deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
   spawningObject: {fileID: 3437721484483019144, guid: e70b450b3cdafae4a85dbdcfea430765, type: 3}
