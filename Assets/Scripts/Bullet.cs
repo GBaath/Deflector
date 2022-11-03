@@ -7,8 +7,6 @@ public class Bullet : MonoBehaviour
     public Vector3 direction;
     public float speed;
     public bool isplayerOwened,fired;
-    public bool pierce;
-    public int damage = 1;
 
     private Rigidbody2D rb;
 
@@ -37,16 +35,9 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy")&&isplayerOwened&&fired)
         {
-            collision.GetComponent<EnemyHp>().TakeDamage(damage);
-            if (!pierce)
-            {
-                Destroy(gameObject);
-                Instantiate(explosion, transform.position, Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(explosion, transform.position, Quaternion.identity);
-            }
+            collision.GetComponent<EnemyHp>().TakeDamage(1);
+            Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
         else if(collision.CompareTag("Player") &!isplayerOwened)
         {

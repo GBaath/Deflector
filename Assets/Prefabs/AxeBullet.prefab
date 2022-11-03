@@ -263,7 +263,6 @@ MonoBehaviour:
   speed: 10
   isplayerOwened: 0
   fired: 0
-  pierce: 1
   explosion: {fileID: 8821196973062417693, guid: 352c54b629dd88f40b5af0a45aa6c059, type: 3}
 --- !u!50 &3603641662482240316
 Rigidbody2D:

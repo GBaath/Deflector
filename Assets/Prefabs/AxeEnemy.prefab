@@ -327,8 +327,8 @@ MonoBehaviour:
   bullet: {fileID: 9029502555400559175, guid: 9b4ef8b4d016c3241bf241eeec3ffd4e, type: 3}
   coin: {fileID: 6796794270325423979, guid: ce0fe5dd4f32b0243b25f00624d8f31b, type: 3}
   fireRate: 1
-  walkStep: 2
-  walkDistMult: 10
+  walkStep: 1
+  walkDistMult: 5
   scoreOnKill: 500
   playerPos: {fileID: 0}
   deathObject: {fileID: 1078193122846835487, guid: d553df661843f8545ab925915b1807e7, type: 3}
@@ -493,8 +493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpSlider: {fileID: 4740881576381693188}
-  hp: 3
-  maxHp: 3
+  hp: 2
+  maxHp: 2
 --- !u!1001 &4117716906781491711
 PrefabInstance:
   m_ObjectHideFlags: 0

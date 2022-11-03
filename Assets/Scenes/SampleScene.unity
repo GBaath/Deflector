@@ -1780,7 +1780,7 @@ MonoBehaviour:
   - {fileID: 4566495312392431049, guid: 7729c1bd965a1b04ea9eefb69c090d79, type: 3}
   currentEnemies: []
   wave: 1
-  enemyTypes: 1
+  enemyTypes: 3
 --- !u!1 &1695866004
 GameObject:
   m_ObjectHideFlags: 0
